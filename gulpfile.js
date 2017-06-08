@@ -83,7 +83,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.run('styles', 'scripts', 'images', 'sprites');
+    gulp.run('styles', 'scripts', 'images');
 });
 
 gulp.task('watch', function (){
