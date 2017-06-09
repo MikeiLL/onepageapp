@@ -17,25 +17,27 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div style="position:relative;">
+        <div class="nav" style="position:relative;">
             <button class="hamburger hamburger--collapse" type="button" style="z-index:1000;">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
             </button>
+            <ul class="topMenu hidden" style="z-index:999;">
+            </ul>
         </div>
         <div class="main">
 
-            <section>
+            <section data-name="First">
                 <p>  </p>
             </section>
-            <section>
+            <section data-name="Second">
                 <h2> B </h2>
             </section>
-            <section>
+            <section data-name="Third">
                 <h2> C </h2>
             </section>
-            <section>
+            <section data-name="Fourth">
                 <h2> D </h2>
             </section>
         </div>
@@ -57,11 +59,13 @@
         <script>
           // Look for .hamburger
           var hamburger = document.querySelector(".hamburger");
+          var menu = document.querySelector(".topMenu");
           // On click
           hamburger.addEventListener("click", function() {
             // Toggle class "is-active"
             hamburger.classList.toggle("is-active");
             // Do something else, like open/close menu
+            menu.classList.toggle("hidden");
           });
         </script>
     </body>
